@@ -1,0 +1,226 @@
+
+body {
+    background-image: url("https://images5.alphacoders.com/527/thumb-1920-527084.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+h1 {
+    color:ghostwhite;
+}
+.ex {
+    background-color: #3b4148;
+    margin: 5% auto;
+    padding: 20px;
+    border: 5px solid #040f0f;
+    width: 30%;
+    border-radius: 8rem;
+    text-align: center;
+}
+table {
+    border-collapse:collapse;
+    width: 70%;
+    margin:auto;
+    font-size:25px;
+}
+table, td, th {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 8px;
+}
+  
+tr {
+    background-color: #ddddddc0;
+}
+.ex-content{
+    margin:auto;
+    margin-top:5%;
+    border-radius: 2rem;
+    text-align: center;
+}
+
+.home-content{
+    margin:auto;
+    margin-top:5%;
+    width: 590px;
+    border-radius: 2rem;
+    text-align: center;
+}
+.home-heading{
+    font-size: 90px;
+    letter-spacing: 5px;
+    font-weight: 300;
+    line-height: 100px;
+    text-shadow: rgb(0, 0, 0) 0 0 4px;
+    margin-bottom: 15%;
+}
+.ex-heading{
+    font-size: 90px;
+    letter-spacing: 5px;
+    font-weight: 300;
+    line-height: 100px;
+    text-shadow: rgb(0, 0, 0) 0 0 4px;
+    margin-bottom: 5%;
+}
+.home-text p{
+    font-size: 30px;
+    color:#ffffff;
+    text-shadow: rgb(0, 0, 0) 0 0 4px;
+    margin-bottom: 5%;
+}
+.main-btn {
+    font-size: 30px;
+    color:ghostwhite;
+    background-color: #586da7af;
+    border-radius: 9rem;
+    width: 50%;
+    height: 7%;
+}
+.main-btn:hover{
+    background-color: #204fceaf;
+}
+.navbar {
+    background-color: transparent;
+}
+.nav-link:hover{
+    border-color: #ffffff;
+    color: #ffffff;
+}
+.nav-link {
+    border-radius: 0.5rem;
+    font-size: 30px;
+    border-style: solid;
+    border-color:transparent;
+    color: #ffffff;
+}
+.trClickable:hover {
+     cursor: pointer; 
+     background-color: #5087b4c0;
+}
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding: 10%; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+  /* Modal Content */
+  .modal-content {
+    background-color: #3b4148;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 0.25rem;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    margin-left: 97%;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+.btnSubmit {
+    margin-left: 90%;
+}
+.form-right {
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 1%;
+}
+.radioGroup {
+    margin-left: 10%;
+}
+.inName {
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 1%;
+}
+.iMail {
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 1%;
+}
+.radioGroup {
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 1%;
+}
+input[type=radio], input[type=checkbox] {
+    margin-bottom: 2%;
+}
+.form-bottom {
+    margin-top: 5%;
+    text-align: center;
+}
+label {
+    color: #ffffff;
+}
+
+ul {
+    display:flex;
+    list-style:none;
+    padding: 0px;
+    justify-content: space-between;
+}
+li{
+    padding:5px 10px;
+}
+@media (max-width: 575.98px) { 
+
+}
+
+@media (min-width: 576px) and (max-width: 810px) { 
+    .nav-link{
+        font-size: 15px;
+    }
+    .home-heading{
+        font-size: 50px;
+        line-height: 75px;
+        margin-bottom: 25%;
+    }
+    .home-text p {
+        margin-bottom: 45%;
+      }
+    .home-btn {
+        margin-bottom: 70%;
+    }
+}
+
+@media (min-height: 600px) and (max-height: 900px) { 
+  .home-content{
+      width: 40%;
+  }
+  .home-heading{
+      font-size: 65px;
+      line-height: 75px;
+      margin-bottom: 15%;
+  }
+  .ex-heading{
+    font-size: 75px;
+    line-height: 75px;
+  }
+  .home-btn {
+    margin-bottom: 0;
+    }
+  table{
+      font-size: 20px;
+  }
+}
