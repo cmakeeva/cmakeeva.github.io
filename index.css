@@ -1,9 +1,11 @@
-
+html, body {
+    width: 100%; height: 100%;
+    margin: 0; padding: 0;
+  }
 body {
     background-image: url("https://images5.alphacoders.com/527/thumb-1920-527084.jpg");
     background-size:cover;
     background-repeat: no-repeat;
-    height: 100%;
 }
 h1 {
     color:ghostwhite;
