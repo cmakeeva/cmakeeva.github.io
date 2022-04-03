@@ -10,7 +10,7 @@
       }
 
     </script>
-    <script src="scripts.js" async></script> 
+    <script src="script.js" async></script>
   </head>
   <body>
   <!-- #region Header -->
@@ -23,7 +23,7 @@
         <a class="nav-link" href="#">Экскурсии</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">О сервисе</a>
+        <a class="nav-link" href="#" onclick="OpenFeedbackModal();">Обратная связь</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Контакты</a>
@@ -141,7 +141,42 @@
       </form>
       
     </div>
-
    </div>
+   <!-- The Feedback Modal -->
+  <div id="FeedbackModal" class="modal">
+    <div class="modal-content">
+      <span class="close" name="fbClose">&times;</span>
+      <h1 style="text-align: center; padding-bottom: 5%; font-size: 1.5vw;">Напишите нам</h1>
+      <form class="feedbackForm">
+        <div>
+          <label for ="inName" style="margin-right: 0.7vw;" class ="form-left" >
+            Имя
+          </label>
+          <input type="text" placeholder="Имя" name="inName" required>
+        </div>
+
+        <div>
+          <label for ="iMail" class ="form-left" >
+            Почта
+          </label>
+          <input type="text" placeholder="Qwerty@example.com" name="iMail" required>
+        </div>
+        <div class ="form-bottom">
+          <textarea rows="5" cols="60" name="feedbackinput" placeholder="Сообщение"></textarea>
+          <br>
+          <button type="submit">Отправить</button>
+        </div>
+      </form>
+    </div>
+   </div>
+
+   <!-- The Status Modal -->
+   <div id="statusModal" class="StatusModal">
+    <!-- Modal content -->
+    <div class="StatusModal-content">
+      <p class="statusMessage"></p>
+      <button class="btnstatus">Ok</button>
+    </div>
+  </div>
   </body>
 </html>

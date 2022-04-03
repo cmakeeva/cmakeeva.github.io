@@ -3,8 +3,13 @@
     <title>Главная</title>    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./index.css"/>
     
+    <link rel="stylesheet" href="./index.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   
+    <script src="script.js" async></script> 
+   
   </head>
   <body>
   <!-- #region Header -->
@@ -16,8 +21,8 @@
       <li class="nav-item">
         <a class="nav-link" href="./excursions.html">Экскурсии</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">О сервисе</a>
+      <li class="nav-item" >
+        <a class="nav-link" href="#" onclick="OpenFeedbackModal();">Обратная связь</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Контакты</a>
@@ -26,7 +31,6 @@
     
   </div>
   <!-- #endregion -->
-
   <div class="home-content">
     <h1 class="home-heading">Вся Москва в одном сайте</h1>
     <div class="home-text">
@@ -70,5 +74,43 @@
     </div>
     <!-- Copyright -->
   </footer>
+  
+  <!-- The Feedback Modal -->
+  <div id="FeedbackModal" class="modal">
+    <div class="modal-content">
+      <span class="close" name="fbClose">&times;</span>
+      <h1 style="text-align: center; padding-bottom: 5%; font-size: 1.5vw;">Напишите нам</h1>
+      <form class="feedbackForm">
+        <div>
+          <label for ="inName" style="margin-right: 0.7vw;" class ="form-left" >
+            Имя
+          </label>
+          <input type="text" placeholder="Имя" name="inName" required>
+        </div>
+
+        <div>
+          <label for ="iMail" class ="form-left" >
+            Почта
+          </label>
+          <input type="text" placeholder="Qwerty@example.com" name="iMail" required>
+        </div>
+        <div class ="form-bottom">
+          <textarea rows="5" cols="60" name="feedbackinput" placeholder="Сообщение"></textarea>
+          <br>
+          <button type="submit">Отправить</button>
+        </div>
+      </form>
+    </div>
+   </div>
+
+   <!-- The Status Modal -->
+   <div id="statusModal" class="StatusModal">
+    <!-- Modal content -->
+    <div class="StatusModal-content">
+      <p class="statusMessage"></p>
+      <button class="btnstatus">Ok</button>
+    </div>
+  </div>
+
   </body>
 </html>
