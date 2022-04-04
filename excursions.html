@@ -8,7 +8,17 @@
       if (global === undefined) {
         var global = window;
       }
-
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      $("#inSearch").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#myTable tr").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
     </script>
     <script src="script.js" async></script>
   </head>
@@ -36,6 +46,17 @@
   <div class="ex-content">
     <h1 class ="ex-heading">Список экскурсий</h1>
   </div>
+  <div class="searchDiv">
+    <form class="search-form" action="" method="GET">
+      <label for="search" >
+        Поиск
+      </label>
+      <input name="search" type="text" id="inSearch">
+    </form>
+    
+
+  </div>
+  
   <table>
     <tr>
       <th>№</th>
@@ -43,6 +64,7 @@
       <th>Длительность</th>
       <th>Цена</th>
     </tr>
+    <tbody id="myTable">
     <tr class="trClickable" onclick="OpenModal()" >
       <td>1</td>
       <td>Речная</td>
@@ -61,6 +83,7 @@
       <td>2 ч</td>
       <td>1500 Р</td>
     </tr>
+    </tbody>
   </table>
   <footer class="bg-dark text-center text-white  fixed-bottom">
     <!-- Grid container -->
@@ -71,12 +94,10 @@
         <a class="btn btn-outline-light btn-floating m-1" href="https://vk.com/" role="button">
           VK
         </a>
-
         <!-- Instagram -->
         <a class="btn btn-outline-light btn-floating m-1" href="https://Instagram.com/" role="button">
           Inst
         </a>
-
         <!-- Github -->
         <a class="btn btn-outline-light btn-floating m-1" href="https://Github.com/" role="button">
           Github
@@ -87,7 +108,7 @@
     <!-- Grid container -->
 
     <!-- Copyright -->
-    <div class="text-center p-1" style="background-color: rgba(0, 0, 0, 0.2);">
+    <div class="text-center p-1" style="background-color: rgba(0, 0, 0, 0.2); font-size: 1vw;">
       © 2022 Copyright
     </div>
     <!-- Copyright -->
@@ -95,13 +116,11 @@
 
    <!-- The Modal -->
    <div id="myModal" class="modal">
-
-    <!-- Modal content -->
     <div class="modal-content">
       <span class="close">&times;</span>
       <h1 style="text-align: center; padding-bottom: 5%; font-size: 2vw;">Форма заполнения</h1>
       <form action="" method="POST">
-  
+
         <div>
           <label for ="inName" style="margin-right: 0.7vw;" class ="form-left" >
             Имя
@@ -142,6 +161,7 @@
       
     </div>
    </div>
+   
    <!-- The Feedback Modal -->
   <div id="FeedbackModal" class="modal">
     <div class="modal-content">

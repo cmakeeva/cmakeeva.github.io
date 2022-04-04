@@ -11,11 +11,6 @@ span.onclick = function() {
     modal.style.display = "none";
 }
 
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
 // #endregion
 
 
@@ -31,12 +26,9 @@ span2.onclick = function() {
     feedbackModal.style.display = "none";
 }
 
-window.onclick = function(event) {
-    if (event.target == feedbackModal) {
-        feedbackModal.style.display = "none";
-    }
-}
 //#endregion 
+
+
 
 // #region окно проверка данных
 var nameInput = document.getElementsByName('inName')[0];
@@ -72,3 +64,14 @@ document.querySelector('form.feedbackForm').addEventListener('submit', function 
 });
 // #endregion
 
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+    if (event.target == feedbackModal) {
+        feedbackModal.style.display = "none";
+    }
+    if (event.target == statusModal) {
+        statusModal.style.display = "none";
+    }
+}
