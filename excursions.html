@@ -10,16 +10,6 @@
       }
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script>
-    $(document).ready(function(){
-      $("#inSearch").on("keyup", function() {
-        var value = $(this).val().toLowerCase();
-        $("#myTable tr").filter(function() {
-          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-        });
-      });
-    });
-    </script>
     <script src="script.js" async></script>
   </head>
   <body>
@@ -108,7 +98,7 @@
     <!-- Grid container -->
 
     <!-- Copyright -->
-    <div class="text-center p-1" style="background-color: rgba(0, 0, 0, 0.2); font-size: 1vw;">
+    <div class="text-center">
       © 2022 Copyright
     </div>
     <!-- Copyright -->
